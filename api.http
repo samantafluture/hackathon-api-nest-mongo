@@ -2,12 +2,12 @@ POST http://localhost:3000/event/create
 Content-Type: application/json
 
 {
-    "name": "Hackathon Google Robotics",
-    "description": "Code challenges for geeks",
-    "price": 35,
-    "location": "Sao Paulo, Brazil",
-    "date": "02/11/2021",
-    "url": "http://google.com"
+    "name": "Code Challenge Nasa Space Hack",
+    "description": "Three days of lectures and challenges",
+    "price": 105,
+    "location": "Austin, Texas",
+    "date": "01/05/2022",
+    "url": "http://nasa.com"
 }
 
 
