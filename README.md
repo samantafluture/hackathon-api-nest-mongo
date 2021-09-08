@@ -6,7 +6,7 @@ Built with:
 - Nest.js
 - MongoDB/Mongoose
 
-Deploy in Heroku.
+Deploy in Heroku: [access live API here] (https://hackathon-api-nest-mongo.herokuapp.com/event/all).
 
 ## Features
 
