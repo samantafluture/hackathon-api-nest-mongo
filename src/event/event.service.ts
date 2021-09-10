@@ -21,7 +21,10 @@ export class EventService {
   async filter(query) {
     const { name } = query;
     if (name) {
-      return this.eventModel.find({ name: name }).exec();
+      // return this.eventModel.find({ name: name }).exec();
+      return this.eventModel
+        .find({ name: { $regex: name, $options: 'i' } })
+        .exec();
     } else {
       return this.eventModel.find().exec();
     }
