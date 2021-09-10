@@ -18,6 +18,11 @@ export class EventService {
     return this.eventModel.find().exec();
   }
 
+  async filter(query) {
+    const { value } = query;
+    return this.eventModel.find(value).exec();
+  }
+
   async findById(event: Event) {
     return await this.eventModel.findById(event).exec();
   }

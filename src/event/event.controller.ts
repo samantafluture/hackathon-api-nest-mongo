@@ -6,6 +6,7 @@ import {
   Param,
   Post,
   Put,
+  Query,
 } from '@nestjs/common';
 import { EventService } from './event.service';
 import { Event } from './event.model';
@@ -17,6 +18,11 @@ export class EventController {
   @Get('all')
   async findAll() {
     return this.service.findAll();
+  }
+
+  @Get('search')
+  async filter(@Query() query) {
+    return this.service.filter(query);
   }
 
   @Get('find/:id')
