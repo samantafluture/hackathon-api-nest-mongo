@@ -19,7 +19,8 @@ export class EventService {
   }
 
   async filter(query) {
-    const { value } = query;
+    let { value } = query;
+    value = value || '';
     return this.eventModel.find(value).exec();
   }
 
