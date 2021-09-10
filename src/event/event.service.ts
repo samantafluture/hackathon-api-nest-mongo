@@ -21,7 +21,7 @@ export class EventService {
   async filter(query) {
     const { name } = query;
     // return this.eventModel.find({ name: name }).exec();
-    return this.eventModel.find({ $text: { $search: name } }).exec();
+    return this.eventModel.find({ name: { $text: { $search: name }}}).exec();
   }
 
   async findById(event: Event) {
