@@ -20,7 +20,11 @@ export class EventService {
 
   async filter(query) {
     const { name } = query;
-    return this.eventModel.find({ name: name }).exec();
+    if (name) {
+      return this.eventModel.find({ name: name }).exec();
+    } else {
+      return this.eventModel.find().exec();
+    }
   }
 
   async findById(event: Event) {
